@@ -1,0 +1,19 @@
+Input:
+
+	"canada"
+
+Script:
+
+	%dw 2.0
+	output application/json
+	fun getCountry(country) = country match {
+	    case "canada" -> "CA"
+	    case "mexico" -> "MX"
+	    else -> null
+	}
+	---
+	getCountry(payload)
+
+Output:
+
+	"CA"
