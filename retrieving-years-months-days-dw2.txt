@@ -1,0 +1,20 @@
+Input:
+  
+  "1990-01-01"
+  
+Script:
+
+  import between from dw::core::Periods
+  ---
+  between(
+      //now() as Date, //uncomment this line to use today's date
+      "2021-03-20" as Date, //this was the date of the recording. Use this to match the video's outputs
+      payload as Date
+  )
+  //.years //31
+  //.days //19
+  .months //2
+
+Output:
+
+  2
